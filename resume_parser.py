@@ -1,5 +1,7 @@
 import nltk
 nltk.download('stopwords')
+import os
+os.system('python -m spacy download en_core_web_sm')
 
 from pyresparser import ResumeParser
 import os
