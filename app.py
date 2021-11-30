@@ -5,7 +5,8 @@ import os
 os.system('python -m spacy download en_core_web_sm')
 from pyresparser import ResumeParser
 from io import BytesIO
-
+import spacy.cli
+spacy.cli.download("en_core_web_lg")
 
 def main():
     st.title("Resume Parser")
