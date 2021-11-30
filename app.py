@@ -23,7 +23,8 @@ def main():
             with open("uploaded_files_copy.pdf", 'wb') as f:
                 f.write(file.read())
 
-            name = (ResumeParser("uploaded_files_copy.pdf").get_extracted_data())['name']
+            # name = (ResumeParser("uploaded_files_copy.pdf").get_extracted_data())['name']
+            name = (ResumeParser("uploaded_files_copy.pdf").get_extracted_data()).get('name', 'Name not found')
             st.success(f"This is {name}'s resume and \n file name is {file.name}")
     
 if __name__=='__main__':
